@@ -9,6 +9,7 @@ include_directories("../thirdparty/spdlog/include")
 # Creates library for unit testing 
 add_library(${CMAKE_PROJECT_NAME}_lib STATIC ${SOURCES})
 add_executable(${BINARY} ${SOURCES})
+if (UNIX)
 target_link_libraries(${BINARY} stdc++fs)
-
+endif (UNIX)
 
